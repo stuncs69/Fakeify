@@ -20,3 +20,18 @@ class personal:
         
         def full():
             return f"{personal.name.first()} {personal.name.last()}"
+    class age:
+        def number():
+            import random
+            return random.randint(4,99)
+        
+        def dob():
+            import random, time, datetime
+            random.seed(random.randint(1, 999))
+            d = random.randint(1, int(time.time()))
+            return datetime.date.fromtimestamp(d).strftime('%Y-%m-%d')
+        
+class conversion:
+    def dob_to_age(dob):
+        import datetime
+        return datetime.datetime.now().year - datetime.datetime.strptime(dob, '%Y-%m-%d').year
