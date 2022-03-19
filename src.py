@@ -1,4 +1,4 @@
-def return_array(filename):
+def return_array(filename): # im too lazy to change this
     with open(f"./data/{filename}", 'r') as f:
         import random
         return random.choice([line.split() for line in f.readlines()][0])
